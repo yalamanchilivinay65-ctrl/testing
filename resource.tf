@@ -135,6 +135,7 @@ resource "azurerm_network_interface" "my_nic" {
   }
 }
 
+/*
 resource "azurerm_subnet" "Bastionsubnet" {
   name                 = "AzureBastionSubnet"
   resource_group_name  = azurerm_resource_group.my_rg.name
@@ -161,6 +162,7 @@ resource "azurerm_bastion_host" "BastionHost" {
     public_ip_address_id = azurerm_public_ip.BastionPIP.id
   }
 }
+*/
 
 resource "azurerm_linux_virtual_machine" "my_VM" {
   count = length(var.VM_NAMES)
